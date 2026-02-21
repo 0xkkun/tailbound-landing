@@ -68,7 +68,7 @@ export default async function Page() {
                 muted 
                 playsInline 
                 preload="metadata"
-                poster="/poster.jpg"
+                poster="/poster.webp"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000"
               />
               {/* Logo / Title Overlay — desktop only */}
@@ -93,7 +93,7 @@ export default async function Page() {
             <div className="absolute inset-0 z-0 bg-[#0A0A0C]">
               {/* 사용자께서 올려주신 일러스트를 /public/lore-bg.png 로 저장했다고 가정하고 불러옵니다 */}
               <img 
-                src="/lore-bg.png" 
+                src="/lore-bg.webp" 
                 alt="Tailbound Lore" 
                 loading="lazy"
                 className="w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-1000 ease-out mix-blend-screen" 

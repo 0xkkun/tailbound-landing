@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Tailbound",
     images: [
       {
-        url: "https://tailbound.xyz/lore-bg.png",
+        url: "https://tailbound.xyz/lore-bg.webp",
         width: 1200,
         height: 630,
         alt: "설화 세계관 일러스트",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "설화 (魂录) - Tailbound",
     description: "달빛 아래 귀문이 열린다. 부적과 정화수로 악귀를 막아내는 조선 설화 로그라이크.",
-    images: ["https://tailbound.xyz/lore-bg.png"],
+    images: ["https://tailbound.xyz/lore-bg.webp"],
     creator: "@tailbound_game",
   },
 };
@@ -71,6 +71,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${notoSansKR.variable} ${outfit.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://cdn.tailbound.xyz" />
+        <link rel="dns-prefetch" href="https://cdn.tailbound.xyz" />
+        <link rel="preload" href="/poster.webp" as="image" />
+        <link rel="preload" href="/title.png" as="image" />
+      </head>
       <body className="antialiased font-sans" style={{ fontFamily: 'var(--font-noto-sans-kr), sans-serif' }}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <LoadingScreen />
