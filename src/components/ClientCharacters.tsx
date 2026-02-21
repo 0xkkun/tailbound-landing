@@ -34,24 +34,26 @@ const CharacterSprite = ({ src, alt, cols, heightClass = "h-40 md:h-56", classNa
 
   return (
     <div 
-      className={`relative inline-block overflow-hidden ${heightClass} ${className}`}
+      className={`inline-block ${heightClass} ${className}`}
       style={{ aspectRatio: aspect, filter: `drop-shadow(0 0 30px ${shadowColor})` }}
     >
-      <img 
-        src={src} 
-        alt={alt} 
-        title={alt}
-        className="absolute top-0 left-0 max-w-none h-full w-auto pixel-art" 
-        onLoad={(e) => {
-          const w = e.currentTarget.naturalWidth;
-          const h = e.currentTarget.naturalHeight;
-          setAspect((w / cols) / h);
-        }}
-        style={{ 
-          transform: `translateX(-${(frame / cols) * 100}%)`,
-          transition: 'none'
-        }}
-      />
+      <div className="relative w-full h-full overflow-hidden">
+        <img 
+          src={src} 
+          alt={alt} 
+          title={alt}
+          className="absolute top-0 left-0 max-w-none h-full w-auto pixel-art" 
+          onLoad={(e) => {
+            const w = e.currentTarget.naturalWidth;
+            const h = e.currentTarget.naturalHeight;
+            setAspect((w / cols) / h);
+          }}
+          style={{ 
+            transform: `translateX(-${(frame / cols) * 100}%)`,
+            transition: 'none'
+          }}
+        />
+      </div>
     </div>
   );
 };
