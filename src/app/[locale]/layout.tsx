@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description: "달빛 아래 귀문이 열린다. 부적과 정화수로 악귀를 막아내는 조선 설화 로그라이크 퇴마 액션.",
   icons: {
     icon: "/icon.png",
-    apple: "/icon.png",
+    apple: "/apple-icon.png",
   },
   openGraph: {
     title: "설화 (魂录) | Tailbound",
