@@ -14,18 +14,18 @@ export default async function Page() {
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full py-6 bg-[#0A0A0C]/70 backdrop-blur-md z-[100] border-b border-white/5">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-8">
-          <a href="#home" className="group">
-            <img src="/title.png" alt={`${t('Common.logoText')} ${t('Common.logoSub')}`} className="h-10 w-auto pixel-art group-hover:drop-shadow-[0_0_8px_rgba(227,159,84,0.5)] transition-all" />
+      <nav className="fixed top-0 w-full py-4 lg:py-6 bg-[#0A0A0C]/70 backdrop-blur-md z-[100] border-b border-white/5">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-4 lg:px-8">
+          <a href="#home" className="group shrink-0">
+            <img src="/title.png" alt={`${t('Common.logoText')} ${t('Common.logoSub')}`} className="h-8 lg:h-10 w-auto pixel-art group-hover:drop-shadow-[0_0_8px_rgba(227,159,84,0.5)] transition-all" />
           </a>
           <ul className="hidden md:flex gap-8 text-[#A0A0A5] font-medium">
             <li><a href="#about" className="hover:text-[#E39F54] transition-colors">{t('Nav.worldview')}</a></li>
             <li><a href="#features" className="hover:text-[#E39F54] transition-colors">{t('Nav.features')}</a></li>
             <li><a href="#characters" className="hover:text-[#E39F54] transition-colors">{t('Nav.characters')}</a></li>
           </ul>
-          <div className="flex items-center gap-4">
-            <a href="https://apps.apple.com/app/id6754251416" target="_blank" rel="noopener noreferrer" className="bg-transparent border border-[#E39F54] text-[#E39F54] px-6 py-2 rounded-full font-bold transition-all hover:bg-[#E39F54] hover:text-[#0A0A0C] hover:shadow-[0_0_15px_rgba(227,159,84,0.4)] flex items-center gap-2">
+          <div className="flex items-center gap-2 lg:gap-4">
+            <a href="https://apps.apple.com/app/id6754251416" target="_blank" rel="noopener noreferrer" className="hidden md:flex bg-transparent border border-[#E39F54] text-[#E39F54] px-6 py-2 rounded-full font-bold transition-all hover:bg-[#E39F54] hover:text-[#0A0A0C] hover:shadow-[0_0_15px_rgba(227,159,84,0.4)] items-center gap-2">
               <svg viewBox="0 0 384 512" width="16" height="16" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7-56.1 0-112.5 45.4-112.5 125.8 0 78.4 46.8 152 82.5 214.2 16.4 28.5 43.1 63.3 75.3 64.6 28.5 1.3 43-16.7 82.5-16.7 39.5 0 51.5 16.7 82.5 15.6 33.7-1.3 56.4-33.5 72.8-63.3 11.2-22.3 23-53 23-53-48.5-20.3-64.8-67.6-62.5-104.9zM258.9 98.6c18.8-22.3 28.5-54 28.5-84.8-30.8 2.2-64.8 17.5-86.8 40.5-18.8 19.3-30.8 49.9-30.8 81.1 27.5 1.8 61.5-16.7 89.1-36.8z"/></svg>
               <span>{t('Common.appStore')}</span>
             </a>
@@ -36,28 +36,29 @@ export default async function Page() {
 
       <main className="max-w-7xl mx-auto">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center px-8 pt-24 overflow-hidden" id="home">
-          <div className="flex-1 relative z-10 lg:max-w-[50%] mt-20 lg:mt-0">
-            <div className="inline-flex items-center gap-2 bg-[#E39F54]/10 border border-[#E39F54]/30 px-4 py-2 rounded-full text-[#E39F54] text-sm font-bold mb-6">
-              <span className="w-2 h-2 bg-[#E39F54] rounded-full shadow-[0_0_10px_#E39F54]"></span> {t('Hero.badge')}
+        <section className="relative flex flex-col lg:flex-row lg:items-center lg:min-h-screen px-4 lg:px-8 pt-20 lg:pt-24 overflow-hidden gap-6 lg:gap-0" id="home">
+          {/* Text Content */}
+          <div className="relative z-10 lg:flex-1 lg:max-w-[50%] mt-4 lg:mt-0">
+            <div className="inline-flex items-center gap-2 bg-[#E39F54]/10 border border-[#E39F54]/30 px-3 py-1.5 lg:px-4 lg:py-2 rounded-full text-[#E39F54] text-xs lg:text-sm font-bold mb-4 lg:mb-6">
+              <span className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-[#E39F54] rounded-full shadow-[0_0_10px_#E39F54]"></span> {t('Hero.badge')}
             </div>
-            <h1 className="text-[clamp(2.5rem,4.5vw,3.75rem)] font-black leading-tight mb-6 whitespace-pre-line">
+            <h1 className="text-4xl lg:text-[clamp(2.5rem,4.5vw,3.75rem)] font-black leading-tight mb-4 lg:mb-6 whitespace-pre-line">
               {t('Hero.title1')} <span className="text-[#E39F54] drop-shadow-[0_0_15px_rgba(227,159,84,0.4)]">{t('Hero.titleHighlight')}</span>{t('Hero.title2')}
             </h1>
-            <p className="text-xl text-[#A0A0A5] max-w-lg mb-10" dangerouslySetInnerHTML={{ __html: t('Hero.subtitle') }}></p>
-            <div className="flex flex-wrap gap-4">
-              <a href="https://apps.apple.com/app/id6754251416" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#E39F54] to-[#D67A29] text-[#0A0A0C] px-8 py-4 rounded-lg text-lg font-extrabold flex items-center gap-3 transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(227,159,84,0.4)] shadow-[0_5px_20px_rgba(227,159,84,0.4)]">
-                <svg viewBox="0 0 384 512" width="24" height="24" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7-56.1 0-112.5 45.4-112.5 125.8 0 78.4 46.8 152 82.5 214.2 16.4 28.5 43.1 63.3 75.3 64.6 28.5 1.3 43-16.7 82.5-16.7 39.5 0 51.5 16.7 82.5 15.6 33.7-1.3 56.4-33.5 72.8-63.3 11.2-22.3 23-53 23-53-48.5-20.3-64.8-67.6-62.5-104.9zM258.9 98.6c18.8-22.3 28.5-54 28.5-84.8-30.8 2.2-64.8 17.5-86.8 40.5-18.8 19.3-30.8 49.9-30.8 81.1 27.5 1.8 61.5-16.7 89.1-36.8z"/></svg>
+            <p className="text-base lg:text-xl text-[#A0A0A5] max-w-lg mb-6 lg:mb-10" dangerouslySetInnerHTML={{ __html: t('Hero.subtitle') }}></p>
+            <div className="flex flex-wrap gap-3 lg:gap-4">
+              <a href="https://apps.apple.com/app/id6754251416" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#E39F54] to-[#D67A29] text-[#0A0A0C] px-6 py-3 lg:px-8 lg:py-4 rounded-lg text-base lg:text-lg font-extrabold flex items-center gap-2 lg:gap-3 transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(227,159,84,0.4)] shadow-[0_5px_20px_rgba(227,159,84,0.4)]">
+                <svg viewBox="0 0 384 512" width="20" height="20" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7-56.1 0-112.5 45.4-112.5 125.8 0 78.4 46.8 152 82.5 214.2 16.4 28.5 43.1 63.3 75.3 64.6 28.5 1.3 43-16.7 82.5-16.7 39.5 0 51.5 16.7 82.5 15.6 33.7-1.3 56.4-33.5 72.8-63.3 11.2-22.3 23-53 23-53-48.5-20.3-64.8-67.6-62.5-104.9zM258.9 98.6c18.8-22.3 28.5-54 28.5-84.8-30.8 2.2-64.8 17.5-86.8 40.5-18.8 19.3-30.8 49.9-30.8 81.1 27.5 1.8 61.5-16.7 89.1-36.8z"/></svg>
                 <span>{t('Common.appStore')}</span>
               </a>
-              <button disabled className="bg-black/40 text-[#A0A0A5] border border-white/10 px-8 py-4 rounded-lg text-lg font-semibold flex items-center gap-3 cursor-not-allowed opacity-70">
-                <svg viewBox="0 0 512 512" width="24" height="24" fill="currentColor"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+              <button disabled className="bg-black/40 text-[#A0A0A5] border border-white/10 px-6 py-3 lg:px-8 lg:py-4 rounded-lg text-base lg:text-lg font-semibold flex items-center gap-2 lg:gap-3 cursor-not-allowed opacity-70">
+                <svg viewBox="0 0 512 512" width="20" height="20" fill="currentColor"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
                 <span>{t('Common.googlePlay')}</span>
               </button>
             </div>
           </div>
           {/* Main Gameplay / Video Container */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-[50%] h-[300px] md:h-[400px] lg:h-[600px] z-0 opacity-40 lg:opacity-100 p-4 md:p-8">
+          <div className="relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-[50%] h-[240px] md:h-[350px] lg:h-[600px] z-0 lg:p-8">
             <div className="w-full h-full rounded-2xl border border-white/20 shadow-[0_0_50px_rgba(227,159,84,0.15)] overflow-hidden relative group">
               {/* Gameplay Video */}
               <video 
@@ -70,8 +71,8 @@ export default async function Page() {
                 poster="/lore-bg.png"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000"
               />
-              {/* Logo / Title Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6 md:p-10 pointer-events-none">
+              {/* Logo / Title Overlay — desktop only */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent hidden lg:flex flex-col justify-end p-6 md:p-10 pointer-events-none">
                 <div className="flex items-center gap-3 mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
                   <img src="https://cdn.tailbound.xyz/assets/gui/shaman-signature.png" className="w-8 h-8 md:w-12 md:h-12 pixel-art" alt="Logo" />
                   <h3 className="text-2xl md:text-3xl font-black text-[#EFEFEF] drop-shadow-md">{t('Common.logoText')} <span className="text-[#E39F54]">{t('Common.logoSub')}</span></h3>
