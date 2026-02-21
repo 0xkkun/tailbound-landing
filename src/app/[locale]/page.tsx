@@ -16,14 +16,9 @@ export default async function Page() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full py-6 bg-[#0A0A0C]/70 backdrop-blur-md z-[100] border-b border-white/5">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-8">
-          <a href="#home" className="flex items-center gap-3 group">
-            <img src="/icon.png" alt="Tailbound" className="w-8 h-8 pixel-art rounded-lg group-hover:scale-110 transition-transform" />
-            <div className="flex items-baseline gap-1.5">
-              <span className="text-xl font-black text-[#EFEFEF] tracking-tight">TAILBOUND</span>
-              <span className="text-xl font-black text-[#E39F54]">:</span>
-              <span className="text-xl font-black text-[#E39F54]">{t('Common.logoText')}</span>
-              <span className="text-xs text-[#902621] opacity-70 font-bold ml-0.5">{t('Common.logoSub')}</span>
-            </div>
+          <a href="#home" className="flex items-baseline gap-1 group">
+            <span className="text-2xl font-black text-[#E39F54] group-hover:drop-shadow-[0_0_8px_rgba(227,159,84,0.5)] transition-all">{t('Common.logoText')}</span>
+            <span className="text-sm text-[#902621]/60 font-bold">{t('Common.logoSub')}</span>
           </a>
           <ul className="hidden md:flex gap-8 text-[#A0A0A5] font-medium">
             <li><a href="#about" className="hover:text-[#E39F54] transition-colors">{t('Nav.worldview')}</a></li>
@@ -172,14 +167,9 @@ export default async function Page() {
         </section>
       </main>
       <footer className="border-t border-white/5 py-12 px-8 flex flex-col items-center mt-16 text-[#A0A0A5]">
-        <div className="flex items-center gap-3 mb-6">
-          <img src="/icon.png" alt="Tailbound" className="w-10 h-10 pixel-art rounded-lg" />
-          <div className="flex items-baseline gap-1.5">
-            <span className="text-2xl font-black text-[#EFEFEF] tracking-tight">TAILBOUND</span>
-            <span className="text-2xl font-black text-[#E39F54]">:</span>
-            <span className="text-2xl font-black text-[#E39F54]">{t('Common.logoText')}</span>
-            <span className="text-sm text-[#902621] opacity-70 font-bold ml-0.5">{t('Common.logoSub')}</span>
-          </div>
+        <div className="flex items-baseline gap-1 mb-6">
+          <span className="text-2xl font-black text-[#E39F54]">{t('Common.logoText')}</span>
+          <span className="text-sm text-[#902621]/60 font-bold">{t('Common.logoSub')}</span>
         </div>
         <div className="flex gap-6 mb-8">
           <a href="https://x.com/tailbound_game" target="_blank" rel="noopener noreferrer" className="text-[#A0A0A5] hover:text-[#E39F54] hover:scale-110 transition-all">
