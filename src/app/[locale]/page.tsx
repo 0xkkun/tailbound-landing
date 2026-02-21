@@ -17,7 +17,7 @@ export default async function Page() {
       <nav className="fixed top-0 w-full py-6 bg-[#0A0A0C]/70 backdrop-blur-md z-[100] border-b border-white/5">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-8">
           <div className="text-2xl font-black text-[#E39F54] flex items-center gap-2">
-            <span>설화</span><span className="text-base text-[#902621] opacity-80 font-kr">魂录</span>
+            <span>{t('Common.logoText')}</span><span className="text-base text-[#902621] opacity-80 font-kr">{t('Common.logoSub')}</span>
           </div>
           <ul className="hidden md:flex gap-8 text-[#A0A0A5] font-medium">
             <li><a href="#about" className="hover:text-[#E39F54] transition-colors">{t('Nav.worldview')}</a></li>
@@ -74,10 +74,10 @@ export default async function Page() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6 md:p-10 pointer-events-none">
                 <div className="flex items-center gap-3 mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
                   <img src="https://cdn.tailbound.xyz/assets/gui/shaman-signature.png" className="w-8 h-8 md:w-12 md:h-12 pixel-art" alt="Logo" />
-                  <h3 className="text-2xl md:text-3xl font-black text-[#EFEFEF] drop-shadow-md">설화 <span className="text-[#E39F54]">魂录</span></h3>
+                  <h3 className="text-2xl md:text-3xl font-black text-[#EFEFEF] drop-shadow-md">{t('Common.logoText')} <span className="text-[#E39F54]">{t('Common.logoSub')}</span></h3>
                 </div>
                 <p className="text-[#A0A0A5] text-sm md:text-base font-light text-shadow-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75 opacity-0 group-hover:opacity-100">
-                  조선 설화 로그라이크 서바이벌 액션
+                  {t('Hero.subtitle')}
                 </p>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default async function Page() {
               {/* 사용자께서 올려주신 일러스트를 /public/lore-bg.png 로 저장했다고 가정하고 불러옵니다 */}
               <img 
                 src="/lore-bg.png" 
-                alt="설화 세계관 일러스트" 
+                alt="Tailbound Lore" 
                 className="w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-1000 ease-out mix-blend-screen" 
               />
               {/* 자연스러운 텍스트 가독성을 위한 그라데이션 오버레이 */}
@@ -166,7 +166,7 @@ export default async function Page() {
         </section>
       </main>
       <footer className="border-t border-white/5 py-12 px-8 flex flex-col items-center mt-16 text-[#A0A0A5]">
-        <div className="text-2xl font-black text-[#E39F54] mb-6">설화 魂录</div>
+        <div className="text-2xl font-black text-[#E39F54] mb-6">{t('Common.logoText')} {t('Common.logoSub')}</div>
         <div className="flex gap-6 mb-8">
           <a href="https://x.com/tailbound_game" target="_blank" rel="noopener noreferrer" className="text-[#A0A0A5] hover:text-[#E39F54] hover:scale-110 transition-all">
             <svg viewBox="0 0 512 512" width="24" height="24" fill="currentColor"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.6 318.1 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>

@@ -5,7 +5,9 @@
     "preRegister": "Pre-register",
     "appStore": "App Store",
     "googlePlay": "Google Play (Coming Soon)",
-    "footerText": "Copyright © 2026 0xkkun. All rights reserved."
+    "footerText": "Copyright © 2026 0xkkun. All rights reserved.",
+    "logoText": "설화",
+    "logoSub": "魂录"
   },
   "Nav": {
     "worldview": "Lore",
@@ -14,34 +16,34 @@
   },
   "Hero": {
     "badge": "New Roguelike Survival",
-    "title1": "Under the Moonlight",
-    "titleHighlight": "Ghost Gate",
+    "title1": "Under the Moonlight, the",
+    "titleHighlight": "Demon Gate",
     "title2": " Opens",
-    "subtitle": "Become a Grim Reaper or a Shaman, and fend off the pouring evil spirits. Fast-paced roguelike action based on Joseon folklore."
+    "subtitle": "Become Death's Envoy or a Shaman, and fend off the swarming evil spirits. Fast-paced roguelike action rooted in Korean folklore."
   },
   "Lore": {
     "title1": "Those Who Defied Heaven's Will,",
-    "titleHighlight": "The Ghost Gate",
+    "titleHighlight": "the Demon Gate",
     "title2": " Opens.",
-    "text": "Every night when the moon bleeds red across the Eight Provinces of Joseon, vengeful spirits and yōkai begin to run rampant. A tragic shaman who rejected heaven's mandate, and a grim reaper who defied the logic of the underworld. Two exorcists embark on a desperate journey of survival and exorcism, staking their own destinies.",
+    "text": "Every night when the moon bleeds red across the Eight Provinces of Joseon, vengeful spirits and demons begin to run rampant. A tragic shaman who rejected heaven's mandate, and a reaper who defied the laws of the Underworld. Two exorcists embark on a desperate journey of survival, staking their own destinies.",
     "badge1": "Joseon Dark Fantasy",
-    "badge2": "Korean Traditional Action"
+    "badge2": "Korean Folklore Action"
   },
   "Features": {
     "title": "Endless Swarms of ",
-    "titleHighlight": "Yōkai",
+    "titleHighlight": "Demons",
     "desc": "A desperate battle for survival against evil spirits from Korean folklore",
     "item1": {
-      "title": "Diverse Yōkai and Bosses",
-      "desc": "Dokkaebi, Gumiho, Grim Reapers, and Chang-gwi. Familiar yet bizarre monsters of Joseon attack you at every moment."
+      "title": "Diverse Demons and Bosses",
+      "desc": "Dokkaebi, Gumiho, Death's Envoy, and Changgwi — familiar yet bizarre creatures of Joseon attack you at every moment."
     },
     "item2": {
-      "title": "Shamanic Action",
-      "desc": "Fox fire, Jakdu (straw cutter), Moktak (wooden block), and Talismans. Evolve and combine the unique weapons of the Shaman and Reaper."
+      "title": "Shamanic & Reaper Combat",
+      "desc": "Dokkaebi Fire, Shaman's Jakdu, Moktak, and Talismans. Evolve and combine the unique weapons of the Shaman and Reaper."
     },
     "item3": {
-      "title": "Mysterious Artifact System",
-      "desc": "Acquire national treasure-class artifacts like the Cheonmachong Gold Crown, Hahoetal mask, and White Porcelain Moon Jar to unleash unimaginable synergies."
+      "title": "Mysterious Relic System",
+      "desc": "Acquire national treasure-class relics like the Silla Golden Crown, Hahoetal Mask, and White Porcelain Moon Jar to unleash unimaginable synergies."
     }
   },
   "Characters": {
@@ -50,15 +52,15 @@
     "titleEnd": "",
     "shaman": {
       "tabName": "Shaman (무당)",
-      "heading": "The Channeled",
-      "name": "Shaman",
-      "desc": "A specialist in exorcism who wields purifying water and talismans, summoning fox fire to burn enemies in a wide area."
+      "heading": "Heaven-Blessed",
+      "name": "Seola",
+      "desc": "A specialist in exorcism who wields Purifying Water and Talismans, summoning Dokkaebi Fire to burn enemies across a wide area."
     },
     "reaper": {
       "tabName": "Reaper (저승사자)",
-      "heading": "The Defiant",
-      "name": "Reaper",
-      "desc": "An executor of souls who wields the scythe of karma and the sword of the dead, outputting explosive firepower in close combat."
+      "heading": "The Atoning",
+      "name": "Muun",
+      "desc": "An executor of souls who wields the Karma Scythe and Death Sword, unleashing explosive firepower in close combat."
     }
   }
 }
