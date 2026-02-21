@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     siteName: "Tailbound",
     images: [
       {
-        url: "https://tailbound.xyz/lore-bg.webp",
+        url: "https://tailbound.xyz/og.png",
         width: 1200,
         height: 630,
-        alt: "설화 세계관 일러스트",
+        alt: "설화 (Tailbound) - 조선 설화 로그라이크",
       },
     ],
     locale: "ko_KR",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "설화 (魂录) - Tailbound",
     description: "달빛 아래 귀문이 열린다. 부적과 정화수로 악귀를 막아내는 조선 설화 로그라이크.",
-    images: ["https://tailbound.xyz/lore-bg.webp"],
+    images: ["https://tailbound.xyz/og.png"],
     creator: "@tailbound_game",
   },
 };

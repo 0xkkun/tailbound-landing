@@ -4,7 +4,6 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const ClientCharacters = dynamic(() => import('@/components/ClientCharacters'), {
   loading: () => <div className="min-h-[450px]" />,
-  ssr: false,
 });
 
 export default async function Page() {

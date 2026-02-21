@@ -44,7 +44,7 @@ export default function LoadingScreen() {
         alt="Tailbound"
         className="w-[min(66vw,320px)] h-auto pixel-art mb-8"
       />
-      <div className="w-48 h-0.5 bg-white/10 rounded-full overflow-hidden">
+      <div className="w-48 h-1.5 bg-white/10 rounded-full overflow-hidden">
         <div className="h-full bg-[#E39F54] rounded-full animate-loading-bar" />
       </div>
     </div>
