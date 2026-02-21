@@ -68,7 +68,7 @@ export default async function Page() {
                 muted 
                 playsInline 
                 preload="metadata"
-                poster="/lore-bg.png"
+                poster="/poster.jpg"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000"
               />
               {/* Logo / Title Overlay — desktop only */}
