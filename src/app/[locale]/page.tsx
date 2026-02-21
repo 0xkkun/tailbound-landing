@@ -1,8 +1,6 @@
-import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import ClientCharacters from '@/components/ClientCharacters';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import { routing } from '@/i18n/routing';
 
 export default async function Page() {
   const t = await getTranslations();
@@ -139,7 +137,9 @@ export default async function Page() {
                 <div className="w-16 h-16 bg-gradient-to-br from-[#E39F54]/20 to-[#902621]/20 rounded-xl flex items-center justify-center mb-6 border border-[#E39F54]/30 group-hover:scale-110 transition-transform">
                   <img src={f.icon} alt="Icon" className="w-4/5 h-4/5 object-contain pixel-art group-hover:brightness-125 transition-all" />
                 </div>
+                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                 <h3 className="text-2xl font-bold mb-4">{t(`Features.${f.key}.title` as any)}</h3>
+                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                 <p className="text-[#A0A0A5] leading-relaxed break-keep">{t(`Features.${f.key}.desc` as any)}</p>
               </div>
             ))}

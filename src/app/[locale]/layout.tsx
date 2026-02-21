@@ -3,7 +3,22 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { Noto_Sans_KR, Outfit } from 'next/font/google';
 import "../globals.css";
+
+const notoSansKR = Noto_Sans_KR({
+  subsets: ['latin'],
+  weight: ['300', '400', '700', '900'],
+  display: 'swap',
+  variable: '--font-noto-sans-kr',
+});
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  display: 'swap',
+  variable: '--font-outfit',
+});
 
 export const metadata: Metadata = {
   title: "설화 (魂录) — 조선 설화 로그라이크 서바이벌 액션",
@@ -42,10 +57,11 @@ export default async function LocaleLayout({
   params
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
@@ -53,13 +69,8 @@ export default async function LocaleLayout({
   const messages = await getMessages({locale});
 
   return (
-    <html lang={locale}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet" />
-      </head>
-      <body className="antialiased" style={{ fontFamily: "'Noto Sans KR', sans-serif" }}>
+    <html lang={locale} className={`${notoSansKR.variable} ${outfit.variable}`}>
+      <body className="antialiased font-sans" style={{ fontFamily: 'var(--font-noto-sans-kr), sans-serif' }}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           {children}
         </NextIntlClientProvider>

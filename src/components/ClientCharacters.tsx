@@ -56,7 +56,18 @@ const CharacterSprite = ({ src, alt, cols, heightClass = "h-40 md:h-56", classNa
   );
 };
 
-export default function ClientCharacters({ translations }: { translations: any }) {
+interface CharacterTranslations {
+  shamanTab: string;
+  shamanHeading: string;
+  shamanName: string;
+  shamanDesc: string;
+  reaperTab: string;
+  reaperHeading: string;
+  reaperName: string;
+  reaperDesc: string;
+}
+
+export default function ClientCharacters({ translations }: { translations: CharacterTranslations }) {
   const [activeTab, setActiveTab] = useState<"shaman" | "reaper">("shaman");
 
   const weaponClasses = "w-14 h-14 md:w-16 md:h-16";
