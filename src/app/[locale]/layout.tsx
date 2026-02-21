@@ -4,6 +4,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Noto_Sans_KR, Outfit } from 'next/font/google';
+import LoadingScreen from '@/components/LoadingScreen';
 import "../globals.css";
 
 const notoSansKR = Noto_Sans_KR({
@@ -72,6 +73,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${notoSansKR.variable} ${outfit.variable}`}>
       <body className="antialiased font-sans" style={{ fontFamily: 'var(--font-noto-sans-kr), sans-serif' }}>
         <NextIntlClientProvider messages={messages} locale={locale}>
+          <LoadingScreen />
           {children}
         </NextIntlClientProvider>
       </body>

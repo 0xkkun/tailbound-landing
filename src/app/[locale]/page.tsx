@@ -66,6 +66,8 @@ export default async function Page() {
                 loop 
                 muted 
                 playsInline 
+                preload="metadata"
+                poster="/lore-bg.png"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000"
               />
               {/* Logo / Title Overlay */}
@@ -92,6 +94,7 @@ export default async function Page() {
               <img 
                 src="/lore-bg.png" 
                 alt="Tailbound Lore" 
+                loading="lazy"
                 className="w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-1000 ease-out mix-blend-screen" 
               />
               {/* 자연스러운 텍스트 가독성을 위한 그라데이션 오버레이 */}
