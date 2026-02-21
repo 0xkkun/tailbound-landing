@@ -17,7 +17,7 @@
   "Hero": {
     "badge": "全新肉鸽生存动作",
     "title1": "月光之下",
-    "titleHighlight": "鬼门",
+    "titleHighlight": "\n鬼门",
     "title2": "大开",
     "subtitle": "化身阴间使者与退魔巫女，抵挡倾巢而出的恶鬼。基于朝鲜民间传说的快节奏肉鸽动作游戏。"
   },
@@ -51,13 +51,13 @@
     "titleHighlight": "退魔师",
     "titleEnd": "们",
     "shaman": {
-      "tabName": "巫女 (Shaman)",
+      "tabName": "巫女",
       "heading": "承天命的巫女",
       "name": "雪儿",
       "desc": "操纵净水与符咒，召唤独脚鬼火以大范围焚烧敌人的退魔专家。"
     },
     "reaper": {
-      "tabName": "阴间使者 (Reaper)",
+      "tabName": "阴间使者",
       "heading": "赎罪的阴间使者",
       "name": "无运",
       "desc": "挥舞业报之镰与死刃，在近身战中释放爆炸性火力的灵魂执行者。"
