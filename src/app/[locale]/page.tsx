@@ -37,14 +37,12 @@ export default async function Page() {
       <main className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center px-8 pt-24 overflow-hidden" id="home">
-          <div className="flex-1 relative z-10 lg:max-w-[48%] mt-20 lg:mt-0">
+          <div className="flex-1 relative z-10 lg:max-w-[50%] mt-20 lg:mt-0">
             <div className="inline-flex items-center gap-2 bg-[#E39F54]/10 border border-[#E39F54]/30 px-4 py-2 rounded-full text-[#E39F54] text-sm font-bold mb-6">
               <span className="w-2 h-2 bg-[#E39F54] rounded-full shadow-[0_0_10px_#E39F54]"></span> {t('Hero.badge')}
             </div>
-            <h1 className="text-5xl lg:text-7xl font-black leading-tight mb-6">
-              {t('Hero.title1')}<br/>
-              <span className="text-[#E39F54] drop-shadow-[0_0_15px_rgba(227,159,84,0.4)]">{t('Hero.titleHighlight')}</span>
-              {t('Hero.title2')}
+            <h1 className="text-[clamp(2.5rem,4.5vw,3.75rem)] font-black leading-tight mb-6">
+              {t('Hero.title1')} <span className="text-[#E39F54] drop-shadow-[0_0_15px_rgba(227,159,84,0.4)]">{t('Hero.titleHighlight')}</span>{t('Hero.title2')}
             </h1>
             <p className="text-xl text-[#A0A0A5] max-w-lg mb-10" dangerouslySetInnerHTML={{ __html: t('Hero.subtitle') }}></p>
             <div className="flex flex-wrap gap-4">

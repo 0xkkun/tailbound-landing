@@ -17,7 +17,7 @@
   "Hero": {
     "badge": "신작 로그라이크 서바이벌",
     "title1": "달빛 아래",
-    "titleHighlight": "귀문",
+    "titleHighlight": " 귀문",
     "title2": "이 열린다",
     "subtitle": "저승사자와 퇴마 무당이 되어, 쏟아지는 악귀를 막아내라. 조선 설화 바탕의 스피디한 로그라이크 액션"
   },
@@ -52,13 +52,13 @@
     "titleEnd": "들",
     "shaman": {
       "tabName": "무당 (Shaman)",
-      "heading": "천명을 이은",
+      "heading": "천명을 이은 무녀",
       "name": "설아",
       "desc": "정화수와 부적을 다루며, 도깨비불을 소환해 광역으로 적을 불태우는 퇴마의 스페셜리스트."
     },
     "reaper": {
       "tabName": "저승사자 (Reaper)",
-      "heading": "속죄하는",
+      "heading": "속죄하는 사자",
       "name": "무운",
       "desc": "업보의 낫과 사인검을 휘두르며 근접전에서 폭발적인 화력을 뽑아내는 영혼의 집행자."
     }

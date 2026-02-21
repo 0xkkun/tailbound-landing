@@ -16,9 +16,9 @@
   },
   "Hero": {
     "badge": "New Roguelike Survival",
-    "title1": "Under the Moonlight, the",
+    "title1": "The",
     "titleHighlight": "Demon Gate",
-    "title2": " Opens",
+    "title2": " Opens Tonight",
     "subtitle": "Become Death's Envoy or a Shaman, and fend off the swarming evil spirits. Fast-paced roguelike action rooted in Korean folklore."
   },
   "Lore": {
@@ -52,13 +52,13 @@
     "titleEnd": "",
     "shaman": {
       "tabName": "Shaman (무당)",
-      "heading": "Heaven-Blessed",
+      "heading": "Heaven-Blessed Shaman",
       "name": "Seola",
       "desc": "A specialist in exorcism who wields Purifying Water and Talismans, summoning Dokkaebi Fire to burn enemies across a wide area."
     },
     "reaper": {
       "tabName": "Reaper (저승사자)",
-      "heading": "The Atoning",
+      "heading": "Atoning Reaper",
       "name": "Muun",
       "desc": "An executor of souls who wields the Karma Scythe and Death Sword, unleashing explosive firepower in close combat."
     }
