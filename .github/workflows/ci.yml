@@ -12,18 +12,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          cache: pnpm
 
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
 
       - name: Lint
-        run: npx eslint src/
+        run: pnpm lint
 
       - name: Type Check
-        run: npx tsc --noEmit
+        run: pnpm type-check
 
       - name: Build
-        run: npm run build
+        run: pnpm build
