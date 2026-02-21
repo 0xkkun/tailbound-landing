@@ -1,6 +1,11 @@
 import { getTranslations } from 'next-intl/server';
-import ClientCharacters from '@/components/ClientCharacters';
+import dynamic from 'next/dynamic';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+
+const ClientCharacters = dynamic(() => import('@/components/ClientCharacters'), {
+  loading: () => <div className="min-h-[450px]" />,
+  ssr: false,
+});
 
 export default async function Page() {
   const t = await getTranslations();
@@ -17,7 +22,7 @@ export default async function Page() {
       <nav className="fixed top-0 w-full py-4 lg:py-6 bg-[#0A0A0C]/70 backdrop-blur-md z-[100] border-b border-white/5">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 lg:px-8">
           <a href="#home" className="group shrink-0">
-            <img src="/title.png" alt={`${t('Common.logoText')} ${t('Common.logoSub')}`} className="h-8 lg:h-10 w-auto pixel-art group-hover:drop-shadow-[0_0_8px_rgba(227,159,84,0.5)] transition-all" />
+            <img src="/title.png" alt={`${t('Common.logoText')} ${t('Common.logoSub')}`} width={160} height={40} className="h-8 lg:h-10 w-auto pixel-art group-hover:drop-shadow-[0_0_8px_rgba(227,159,84,0.5)] transition-all" />
           </a>
           <ul className="hidden md:flex gap-8 text-[#A0A0A5] font-medium">
             <li><a href="#about" className="hover:text-[#E39F54] transition-colors">{t('Nav.worldview')}</a></li>
@@ -67,14 +72,16 @@ export default async function Page() {
                 loop 
                 muted 
                 playsInline 
-                preload="metadata"
+                preload="auto"
                 poster="/poster.webp"
+                width={720}
+                height={1280}
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000"
               />
               {/* Logo / Title Overlay — desktop only */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent hidden lg:flex flex-col justify-end p-6 md:p-10 pointer-events-none">
                 <div className="flex items-center gap-3 mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
-                  <img src="https://cdn.tailbound.xyz/assets/gui/shaman-signature.png" className="w-8 h-8 md:w-12 md:h-12 pixel-art" alt="Logo" />
+                  <img src="https://cdn.tailbound.xyz/assets/gui/shaman-signature.png" width={48} height={48} className="w-8 h-8 md:w-12 md:h-12 pixel-art" alt="Logo" />
                   <h3 className="text-2xl md:text-3xl font-black text-[#EFEFEF] drop-shadow-md">{t('Common.logoText')} <span className="text-[#E39F54]">{t('Common.logoSub')}</span></h3>
                 </div>
                 <p className="text-[#A0A0A5] text-sm md:text-base font-light text-shadow-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75 opacity-0 group-hover:opacity-100">
@@ -95,6 +102,7 @@ export default async function Page() {
               <img 
                 src="/lore-bg.webp" 
                 alt="Tailbound Lore" 
+                width={1200} height={630}
                 loading="lazy"
                 className="w-full h-full object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-1000 ease-out mix-blend-screen" 
               />
@@ -137,7 +145,7 @@ export default async function Page() {
             ].map((f, i) => (
               <div key={i} className="glass-panel group p-10 flex flex-col justify-start text-left">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#E39F54]/20 to-[#902621]/20 rounded-xl flex items-center justify-center mb-6 border border-[#E39F54]/30 group-hover:scale-110 transition-transform">
-                  <img src={f.icon} alt="Icon" className="w-4/5 h-4/5 object-contain pixel-art group-hover:brightness-125 transition-all" />
+                  <img src={f.icon} alt="Icon" width={48} height={48} loading="lazy" className="w-4/5 h-4/5 object-contain pixel-art group-hover:brightness-125 transition-all" />
                 </div>
                 {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                 <h3 className="text-2xl font-bold mb-4">{t(`Features.${f.key}.title` as any)}</h3>
@@ -168,7 +176,7 @@ export default async function Page() {
         </section>
       </main>
       <footer className="border-t border-white/5 py-12 px-8 flex flex-col items-center mt-16 text-[#A0A0A5]">
-        <img src="/title.png" alt={`${t('Common.logoText')} ${t('Common.logoSub')}`} className="h-12 w-auto pixel-art mb-6" />
+        <img src="/title.png" alt={`${t('Common.logoText')} ${t('Common.logoSub')}`} width={192} height={48} loading="lazy" className="h-12 w-auto pixel-art mb-6" />
         <div className="flex gap-6 mb-8">
           <a href="https://x.com/tailbound_game" target="_blank" rel="noopener noreferrer" className="text-[#A0A0A5] hover:text-[#E39F54] hover:scale-110 transition-all">
             <svg viewBox="0 0 512 512" width="24" height="24" fill="currentColor"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.6 318.1 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>

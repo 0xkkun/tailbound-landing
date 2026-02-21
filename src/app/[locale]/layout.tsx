@@ -74,7 +74,7 @@ export default async function LocaleLayout({
       <head>
         <link rel="preconnect" href="https://cdn.tailbound.xyz" />
         <link rel="dns-prefetch" href="https://cdn.tailbound.xyz" />
-        <link rel="preload" href="/poster.webp" as="image" />
+        <link rel="preload" href="/poster.webp" as="image" fetchPriority="high" />
         <link rel="preload" href="/title.png" as="image" />
       </head>
       <body className="antialiased font-sans" style={{ fontFamily: 'var(--font-noto-sans-kr), sans-serif' }}>
