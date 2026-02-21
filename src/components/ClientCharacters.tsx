@@ -110,7 +110,7 @@ export default function ClientCharacters({ translations }: { translations: Chara
                 <h2 className="text-5xl md:text-7xl font-black text-[#E39F54] drop-shadow-[0_0_15px_rgba(227,159,84,0.3)] mb-6">
                   {translations.shamanName}
                 </h2>
-                <p className="text-lg md:text-xl text-[#EFEFEF] mb-10 leading-relaxed break-keep">
+                <p className="text-lg md:text-xl text-[#EFEFEF] mb-10 leading-relaxed">
                   {translations.shamanDesc}
                 </p>
                 <div className="grid grid-cols-3 max-w-[fit-content] gap-3 md:gap-4">
@@ -147,7 +147,7 @@ export default function ClientCharacters({ translations }: { translations: Chara
                 <h2 className="text-5xl md:text-7xl font-black text-[#902621] drop-shadow-[0_0_15px_rgba(144,38,33,0.3)] mb-6">
                   {translations.reaperName}
                 </h2>
-                <p className="text-lg md:text-xl text-[#EFEFEF] mb-10 leading-relaxed break-keep">
+                <p className="text-lg md:text-xl text-[#EFEFEF] mb-10 leading-relaxed">
                   {translations.reaperDesc}
                 </p>
                 <div className="grid grid-cols-3 max-w-[fit-content] gap-3 md:gap-4">

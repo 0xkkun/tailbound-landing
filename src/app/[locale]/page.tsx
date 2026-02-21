@@ -117,7 +117,7 @@ export default async function Page() {
               <h2 className="text-4xl lg:text-5xl lg:leading-tight font-black leading-tight mb-8 drop-shadow-2xl">
                 {t('Lore.title1')} <br /> <span className="text-[#E39F54] drop-shadow-[0_0_20px_rgba(227,159,84,0.6)]">{t('Lore.titleHighlight')}</span>{t('Lore.title2')}
               </h2>
-              <p className="text-xl md:text-2xl text-[#EFEFEF] leading-relaxed mb-10 font-light break-keep text-shadow-sm font-kr" dangerouslySetInnerHTML={{ __html: t('Lore.text') }}></p>
+              <p className="text-xl md:text-2xl text-[#EFEFEF] leading-relaxed mb-10 font-light text-shadow-sm font-kr" dangerouslySetInnerHTML={{ __html: t('Lore.text') }}></p>
               <div className="flex justify-center flex-wrap gap-4">
                 <span className="bg-black/40 backdrop-blur-md border border-[#E39F54]/40 text-[#F8D7B8] px-6 py-3 rounded-full text-sm font-bold tracking-wider shadow-[0_0_15px_rgba(227,159,84,0.2)]">
                   {t('Lore.badge1')}
@@ -150,7 +150,7 @@ export default async function Page() {
                 {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                 <h3 className="text-2xl font-bold mb-4">{t(`Features.${f.key}.title` as any)}</h3>
                 {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                <p className="text-[#A0A0A5] leading-relaxed break-keep">{t(`Features.${f.key}.desc` as any)}</p>
+                <p className="text-[#A0A0A5] leading-relaxed">{t(`Features.${f.key}.desc` as any)}</p>
               </div>
             ))}
           </div>

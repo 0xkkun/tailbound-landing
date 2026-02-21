@@ -68,6 +68,7 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages({locale});
+  const wordBreakClass = locale === 'ko' ? 'break-keep' : 'break-normal';
 
   return (
     <html lang={locale} className={`${notoSansKR.variable} ${outfit.variable}`}>
@@ -77,7 +78,7 @@ export default async function LocaleLayout({
         <link rel="preload" href="/poster.webp" as="image" fetchPriority="high" />
         <link rel="preload" href="/title.png" as="image" />
       </head>
-      <body className="antialiased font-sans" style={{ fontFamily: 'var(--font-noto-sans-kr), sans-serif' }}>
+      <body className={`antialiased font-sans ${wordBreakClass}`} style={{ fontFamily: 'var(--font-noto-sans-kr), sans-serif' }}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <LoadingScreen />
           {children}
