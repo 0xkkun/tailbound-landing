@@ -38,7 +38,7 @@ export default async function Page() {
       <main className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center px-8 pt-24 overflow-hidden" id="home">
-          <div className="flex-1 relative z-10 lg:w-1/2 mt-20 lg:mt-0">
+          <div className="flex-1 relative z-10 lg:max-w-[48%] mt-20 lg:mt-0">
             <div className="inline-flex items-center gap-2 bg-[#E39F54]/10 border border-[#E39F54]/30 px-4 py-2 rounded-full text-[#E39F54] text-sm font-bold mb-6">
               <span className="w-2 h-2 bg-[#E39F54] rounded-full shadow-[0_0_10px_#E39F54]"></span> {t('Hero.badge')}
             </div>
