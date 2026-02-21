@@ -1,0 +1,62 @@
+{
+  "Common": {
+    "playNow": "开始游戏",
+    "watchTrailer": "观看宣传片",
+    "preRegister": "预约登记",
+    "footerText": "Copyright © 2026 0xkkun. All rights reserved."
+  },
+  "Nav": {
+    "worldview": "世界观",
+    "features": "游戏特色",
+    "characters": "登场角色"
+  },
+  "Hero": {
+    "badge": "全新肉鸽生存动作",
+    "title1": "月光之下",
+    "titleHighlight": "鬼门",
+    "title2": "大开",
+    "subtitle": "化身阴间使者与退魔巫女，抵挡倾巢而出的恶鬼。基于朝鲜民间故事的快节奏肉鸽动作游戏。"
+  },
+  "Lore": {
+    "title1": "逆天而行者，",
+    "titleHighlight": "鬼门",
+    "title2": "大开。",
+    "text": "朝鲜八道，每逢月色染红之夜，游荡人间的怨魂与妖怪便开始肆虐。违抗天命的悲剧巫女，与逆转冥府之理的阴间使者。两名退魔师赌上各自的命运，踏上惨烈的生存与退魔之旅。",
+    "badge1": "朝鲜时代黑暗奇幻",
+    "badge2": "韩国传统民画动作"
+  },
+  "Features": {
+    "title": "无尽蜂拥而至的",
+    "titleHighlight": "妖怪",
+    "desc": "与包含于韩国传统民间传说中的恶鬼展开惨烈的生存战斗",
+    "item1": {
+      "title": "多样的妖怪与首领",
+      "desc": "鬼怪、九尾狐、阴间使者、伥鬼等，熟悉又诡异的朝鲜恶鬼每时每刻向你袭来。"
+    },
+    "item2": {
+      "title": "巫术与道术动作",
+      "desc": "鬼火、铡刀、木鱼、符咒。进化并结合巫女和阴间使者独有的专属武器。"
+    },
+    "item3": {
+      "title": "神秘的遗物系统",
+      "desc": "获得天马冢金冠、河回面具、白瓷满月壶等国宝级遗物，发挥超乎想象的协力作用（Synergy）。"
+    }
+  },
+  "Characters": {
+    "title": "命运的",
+    "titleHighlight": "退魔师",
+    "titleEnd": "们",
+    "shaman": {
+      "tabName": "巫女 (Shaman)",
+      "heading": "神灵附体会",
+      "name": "巫女",
+      "desc": "操作净水与符咒，召唤鬼火并使用大范围技能将敌人燃烧殆尽的退魔专家。"
+    },
+    "reaper": {
+      "tabName": "阴间使者 (Reaper)",
+      "heading": "逆反冥府的",
+      "name": "阴间使者",
+      "desc": "挥舞着业报之镰与亡者之剑，在近身战中输出爆炸性火力的灵魂执行者。"
+    }
+  }
+}
