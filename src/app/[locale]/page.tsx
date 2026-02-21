@@ -16,9 +16,8 @@ export default async function Page() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full py-6 bg-[#0A0A0C]/70 backdrop-blur-md z-[100] border-b border-white/5">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-8">
-          <a href="#home" className="flex items-baseline gap-1 group">
-            <span className="text-2xl font-black text-[#E39F54] group-hover:drop-shadow-[0_0_8px_rgba(227,159,84,0.5)] transition-all">{t('Common.logoText')}</span>
-            <span className="text-sm text-[#902621]/60 font-bold">{t('Common.logoSub')}</span>
+          <a href="#home" className="group">
+            <img src="/title.png" alt={`${t('Common.logoText')} ${t('Common.logoSub')}`} className="h-10 w-auto pixel-art group-hover:drop-shadow-[0_0_8px_rgba(227,159,84,0.5)] transition-all" />
           </a>
           <ul className="hidden md:flex gap-8 text-[#A0A0A5] font-medium">
             <li><a href="#about" className="hover:text-[#E39F54] transition-colors">{t('Nav.worldview')}</a></li>
@@ -167,10 +166,7 @@ export default async function Page() {
         </section>
       </main>
       <footer className="border-t border-white/5 py-12 px-8 flex flex-col items-center mt-16 text-[#A0A0A5]">
-        <div className="flex items-baseline gap-1 mb-6">
-          <span className="text-2xl font-black text-[#E39F54]">{t('Common.logoText')}</span>
-          <span className="text-sm text-[#902621]/60 font-bold">{t('Common.logoSub')}</span>
-        </div>
+        <img src="/title.png" alt={`${t('Common.logoText')} ${t('Common.logoSub')}`} className="h-12 w-auto pixel-art mb-6" />
         <div className="flex gap-6 mb-8">
           <a href="https://x.com/tailbound_game" target="_blank" rel="noopener noreferrer" className="text-[#A0A0A5] hover:text-[#E39F54] hover:scale-110 transition-all">
             <svg viewBox="0 0 512 512" width="24" height="24" fill="currentColor"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.6 318.1 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
