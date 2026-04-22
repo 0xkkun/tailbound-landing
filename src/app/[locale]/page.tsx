@@ -6,11 +6,100 @@ const ClientCharacters = dynamic(() => import('@/components/ClientCharacters'), 
   loading: () => <div className="min-h-[450px]" />,
 });
 
-export default async function Page() {
+const faqByLocale = {
+  ko: [
+    { q: "설화는 어떤 게임인가요?", a: "조선 설화를 배경으로 한 로그라이크 서바이벌 액션 모바일 게임입니다. 무당 또는 저승사자를 선택해 몰려드는 악귀를 물리치며 생존하세요." },
+    { q: "어떤 플랫폼에서 플레이할 수 있나요?", a: "iOS (App Store)와 Android (Google Play) 모두 지원합니다." },
+    { q: "무료 게임인가요?", a: "네, 무료로 다운로드하여 플레이할 수 있습니다." },
+    { q: "어떤 캐릭터가 있나요?", a: "정화수와 부적을 다루는 무당 '설아', 업보의 낫을 휘두르는 저승사자 '무운' 두 캐릭터를 선택할 수 있습니다." },
+  ],
+  en: [
+    { q: "What is Tailbound?", a: "Tailbound is a fast-paced roguelike survival action mobile game rooted in Korean folklore. Choose between a Shaman or Reaper and fend off endless waves of evil spirits." },
+    { q: "What platforms is Tailbound available on?", a: "Tailbound is available on iOS (App Store) and Android (Google Play)." },
+    { q: "Is Tailbound free to play?", a: "Yes, Tailbound is free to download and play." },
+    { q: "Who are the playable characters?", a: "Play as Seola the Shaman, who wields purifying water and talismans, or Muun the Reaper, who swings a karma scythe with a devastating growth curve." },
+  ],
+  ja: [
+    { q: "Tailboundはどんなゲームですか？", a: "朝鮮説話を舞台にしたローグライクサバイバルアクションモバイルゲームです。シャーマンまたは死神を選択し、押し寄せる悪鬼を倒して生き残りましょう。" },
+    { q: "どのプラットフォームで遊べますか？", a: "iOS（App Store）とAndroid（Google Play）の両方に対応しています。" },
+    { q: "無料でプレイできますか？", a: "はい、無料でダウンロードしてプレイできます。" },
+    { q: "プレイアブルキャラクターは誰ですか？", a: "浄化水と護符を操るシャーマン「ソラ」と、業の鎌を振るう死神「ムウン」の2キャラクターから選べます。" },
+  ],
+  zh: [
+    { q: "Tailbound是什么游戏？", a: "Tailbound是一款以朝鲜民间传说为背景的快节奏肉鸽生存动作手游。选择巫女或阴间使者，抵挡无尽的恶鬼袭击。" },
+    { q: "支持哪些平台？", a: "支持iOS（App Store）和Android（Google Play）双平台。" },
+    { q: "游戏免费吗？", a: "是的，游戏免费下载并游玩。" },
+    { q: "有哪些可操作角色？", a: "可选择操纵净水与符咒的巫女「雪儿」，或挥舞业报之镰的阴间使者「无运」。" },
+  ],
+} as const;
+
+const descByLocale = {
+  ko: "달빛 아래 귀문이 열린다. 부적과 정화수로 악귀를 막아내는 조선 설화 로그라이크 퇴마 액션.",
+  en: "The demon gate opens tonight. Wield talismans and purifying water in this fast-paced Korean folklore roguelike exorcism action game.",
+  ja: "月明かりの下、鬼門が開かれる。朝鮮説話をベースにしたスピード感あるローグライク退魔アクションゲーム。",
+  zh: "月光之下，鬼门大开。基于朝鲜民间传说的快节奏肉鸽退魔动作游戏。",
+} as const;
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const t = await getTranslations();
+
+  const faq = faqByLocale[locale as keyof typeof faqByLocale] ?? faqByLocale.ko;
+  const desc = descByLocale[locale as keyof typeof descByLocale] ?? descByLocale.ko;
+
+  const videoGameJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    name: "Tailbound",
+    alternateName: ["설화", "魂录"],
+    url: "https://tailbound.xyz",
+    description: desc,
+    genre: ["Roguelike", "Survival", "Action", "Korean Folklore"],
+    gamePlatform: ["iOS", "Android"],
+    operatingSystem: ["iOS", "Android"],
+    applicationCategory: "Game",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "0xkkun",
+      url: "https://tailbound.xyz",
+    },
+    image: "https://tailbound.xyz/og.png",
+    screenshot: "https://tailbound.xyz/poster.webp",
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    inLanguage: locale,
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
 
   return (
     <div className="relative w-full min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoGameJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Background Elements */}
       <div className="fixed inset-0 w-screen h-screen -z-10 pointer-events-none bg-[radial-gradient(circle_at_50%_10%,#151520_0%,#0A0A0C_60%)]">
         <div className="ambient-glow glow-red" />
@@ -176,6 +265,22 @@ export default async function Page() {
               reaperDesc: t('Characters.reaper.desc'),
             }}
           />
+        </section>
+        {/* FAQ Section */}
+        <section className="py-24 px-4 md:px-8" id="faq">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-black text-center mb-12">
+              {locale === 'ko' ? '자주 묻는 질문' : locale === 'ja' ? 'よくある質問' : locale === 'zh' ? '常见问题' : 'Frequently Asked Questions'}
+            </h2>
+            <dl className="space-y-4">
+              {faq.map((item, i) => (
+                <article key={i} className="glass-panel p-6 rounded-2xl">
+                  <dt className="text-lg font-bold text-[#E39F54] mb-2">{item.q}</dt>
+                  <dd className="text-[#A0A0A5] leading-relaxed">{item.a}</dd>
+                </article>
+              ))}
+            </dl>
+          </div>
         </section>
       </main>
       <footer className="border-t border-white/5 py-12 px-8 flex flex-col items-center mt-16 text-[#A0A0A5]">
